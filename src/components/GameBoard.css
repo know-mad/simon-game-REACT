@@ -1,0 +1,129 @@
+.theater {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.gameboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 410px;
+  width: 410px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  background-color: black;
+}
+
+.center {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  border-radius: 200px;
+  background-color: black;
+  height: 180px;
+  width: 180px;
+}
+
+.button1 {
+  border-radius: 200px 0 0 0;
+  height: 190px;
+  width: 190px;
+  background-color: #f39c12;
+}
+
+.button1:hover {
+  box-shadow: inset 0px 0px 0px 3px cyan;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.button2{
+  border-radius: 0 200px 0 0;
+  height: 190px;
+  width: 190px;
+  background-color: #c0392b;
+}
+
+.button2:hover {
+  box-shadow: inset 0px 0px 0px 3px cyan;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.button3 {
+  border-radius: 0 0 0 200px;
+  height: 190px;
+  width: 190px;
+  background-color: #27ae60;
+}
+
+.button3:hover {
+  box-shadow: inset 0px 0px 0px 3px cyan;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.button4 {
+  border-radius: 0 0 200px 0;
+  height: 190px;
+  width: 190px;
+  background-color: #2980b9;
+}
+
+.button4:hover {
+  box-shadow: inset 0px 0px 0px 3px cyan;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #fff;
+}
+
+.info {
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-color: red;
+  color: #fff;
+  width: 100px;
+}
+
+.info:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.play {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 30px;
+  width: 50px;
+}
+
+.play:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.blank {
+  background-color: black;
+  width: 50px;
+  height: 55px;
+}
