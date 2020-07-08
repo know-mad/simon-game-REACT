@@ -1,0 +1,32 @@
+.modal-body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.3)
+}
+
+.modal {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+  padding: 20px;
+  background-color: #c0392b;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  position: relative;
+  width: 400px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+button {
+  width: 75px;
+}

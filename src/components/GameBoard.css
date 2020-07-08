@@ -1,3 +1,6 @@
+hr {
+  width: 100px;
+}
 .theater {
   display: flex;
   flex-direction: column;
@@ -27,7 +30,6 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: 2;
   border-radius: 200px;
   background-color: black;
   height: 180px;
@@ -41,11 +43,18 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: 2;
   border-radius: 200px;
-  background-color: #c0392b;
+  background-color: red;
   height: 180px;
   width: 180px;
+}
+
+.game-end p {
+  margin: 0px;
+}
+
+.game-end h2 {
+  margin: 0px;
 }
 
 .blank-button {

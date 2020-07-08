@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import './Modal.css'
+const modalRoot = document.getElementById('modal-root')
 
-function Modal(){
-  return(
-    <div>
-      <p>instructions</p>
-    </div>
-  )
+class Modal extends Component{
+
+
+
+  render(){
+
+    return ReactDOM.createPortal(
+      <div className='modal-body'>
+        <div className='modal'>
+          {this.props.children}
+
+        </div>
+      </div>,
+      modalRoot,
+    )
+  }
 }
 
 export default Modal

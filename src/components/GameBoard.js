@@ -5,7 +5,7 @@ import button1 from '../sounds/simonSound1.mp3'
 import button2 from '../sounds/simonSound2.mp3'
 import button3 from '../sounds/simonSound3.mp3'
 import button4 from '../sounds/simonSound4.mp3'
-let sequence = ['button1', 'button2', 'button2', 'button4']
+const sequence = ['button1', 'button2', 'button2', 'button4']
 
 class GameBoard extends Component{
   constructor(){
@@ -38,6 +38,16 @@ class GameBoard extends Component{
       }
     }
   }
+
+handleShowModal = () => {
+  let modalStatus = this.state.showModal
+  this.setState({showModal: !modalStatus})
+}
+
+handleCloseModal = () => {
+  let modalStatus = this.state.showModal
+  this.setState({showModal: modalStatus})
+}
 
 handleClick = (e) => {
   e.preventDefault()
@@ -154,8 +164,22 @@ compare = (index) => {
 
     return(
       <div className='theater'>
-      <div className='info'>
-        <Modal />
+      <div onClick={this.handleShowModal} className='info'>
+        {this.state.showModal ?
+          <Modal onClose={this.handleCloseModal} >
+            <p>press play button to begin or reset game</p>
+            <hr></hr>
+            <p>The device has four colored buttons,
+             each producing a particular tone when
+             it is pressed or activated by the device.
+              A round in the game consists of the device
+               lighting up one or more buttons in a random order,
+                after which the player must reproduce that
+                 order by pressing the buttons. As the game
+                  progresses, the number of buttons to be pressed increases.</p>
+              <hr></hr>
+              <p>***click anywhere to return to game***</p>
+          </Modal> : <p>instructions</p>}
       </div>
         <div className='gameboard'>
           {this.state.round !== 'game-over' ?
@@ -176,8 +200,9 @@ compare = (index) => {
             <p>{this.state.round}</p>
           </div>
           : <div className='game-end'>
-            <h3>simon</h3>
-            <h3>wins</h3>
+            <h2>game over</h2>
+            <p>simon</p>
+            <p>wins</p>
           </div>
           }
 
@@ -189,5 +214,6 @@ compare = (index) => {
     )
   }
 }
+
 
 export default GameBoard
