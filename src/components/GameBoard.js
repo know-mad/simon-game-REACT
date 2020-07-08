@@ -5,7 +5,7 @@ import button1 from '../sounds/simonSound1.mp3'
 import button2 from '../sounds/simonSound2.mp3'
 import button3 from '../sounds/simonSound3.mp3'
 import button4 from '../sounds/simonSound4.mp3'
-const sequence = ['button1', 'button2', 'button2', 'button4']
+const sequence = ['button1', 'button2', 'button3', 'button4']
 
 class GameBoard extends Component{
   constructor(){
