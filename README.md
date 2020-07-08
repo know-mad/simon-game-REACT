@@ -21,7 +21,7 @@ David Velez
 
 ## Deployed
 
-website of deployed app here
+[deployed app is here:](https://hungry-feynman-7e3a89.netlify.app/) 
 
 ## Issues
 
