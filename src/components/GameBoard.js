@@ -115,7 +115,7 @@ simonSequence = () => {
         clearInterval(intervalId)
       }
 
-    if (button ==='button1'){
+    if (button === 'button1'){
       new Audio(button1).play()
     } else if (button === 'button2'){
       new Audio(button2).play()
@@ -130,7 +130,7 @@ simonSequence = () => {
     }, 200)
     number++
     index++
-  }, 500)
+  }, 300)
 }
 
 gameOver = () => {
@@ -157,15 +157,30 @@ compare = (index) => {
       <div className='info'>
         <Modal />
       </div>
-      <div className='gameboard'>
-        <div id={this.state.button1.id} onClick={this.handleClick} className={`button1 ${this.state.button1.active ? 'active' : null}`}></div>
-        <div id={this.state.button2.id} onClick={this.handleClick} className={`button2 ${this.state.button2.active ? 'active' : null}`}></div>
-        <div id={this.state.button3.id} onClick={this.handleClick} className={`button3 ${this.state.button3.active ? 'active' : null}`}></div>
-        <div id={this.state.button4.id} onClick={this.handleClick} className={`button4 ${this.state.button4.active ? 'active' : null}`} ></div>
-      <div className='center'>
-      <h3>round</h3>
-      <p>{this.state.round}</p>
-      </div>
+        <div className='gameboard'>
+          {this.state.round !== 'game-over' ?
+          <div id={this.state.button1.id} onClick={this.handleClick} className={`button1 ${this.state.button1.active ? 'active' : null}`}></div>
+          : <div className='blank-button'></div>}
+          {this.state.round !== 'game-over' ?
+          <div id={this.state.button2.id} onClick={this.handleClick} className={`button2 ${this.state.button2.active ? 'active' : null}`}></div>
+          : <div className='blank-button'></div>}
+          {this.state.round !== 'game-over' ?
+          <div id={this.state.button3.id} onClick={this.handleClick} className={`button3 ${this.state.button3.active ? 'active' : null}`}></div>
+          : <div className='blank-button'></div>}
+          {this.state.round !== 'game-over' ?
+          <div id={this.state.button4.id} onClick={this.handleClick} className={`button4 ${this.state.button4.active ? 'active' : null}`} ></div>
+          : <div className='blank-button'></div>}
+          {this.state.round !== 'game-over' ?
+          <div className='center'>
+            <h3>round</h3>
+            <p>{this.state.round}</p>
+          </div>
+          : <div className='game-end'>
+            <h3>simon</h3>
+            <h3>wins</h3>
+          </div>
+          }
+
       </div>
         {this.state.round === 'game-over' || this.state.round === 0 ?
         <div onClick={this.play} className='play'><p>play</p></div> :

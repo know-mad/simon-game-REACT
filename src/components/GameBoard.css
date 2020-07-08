@@ -34,6 +34,26 @@
   width: 180px;
 }
 
+.game-end {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  border-radius: 200px;
+  background-color: #c0392b;
+  height: 180px;
+  width: 180px;
+}
+
+.blank-button {
+  height: 190px;
+  width: 190px;
+  background-color: black;
+}
+
 .button1 {
   border-radius: 200px 0 0 0;
   height: 190px;
